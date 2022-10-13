@@ -1,14 +1,15 @@
 #include <stdio.h>
 /**
-  *main-printing
-  *Return: Always 0
+  *main - print size of dataTypes
+  *
+  *Return: 0 (successful)
   */
 int main(void)
 {
 	char a;
-	init b;
-	long init c;
-	long long init d;
+	int b;
+	long int c;
+	long long int d;
 	float e;
 
 	printf("Size of a char: %d byte(s)\n", sizeof(a));
