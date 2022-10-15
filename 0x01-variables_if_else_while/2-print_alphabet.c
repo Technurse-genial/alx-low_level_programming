@@ -3,14 +3,17 @@
 #include <stdio.h>
 /**
   * main - prints
+  *
   *Return: Always 0
   */
 int main(void)
 {
-	char letter;
+	int i;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-		putchar(letter);		
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		putchar(i);		
+	}
 	putchar('\n');
 	return (0);
 }
