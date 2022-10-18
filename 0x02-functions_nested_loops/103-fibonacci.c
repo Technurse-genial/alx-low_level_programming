@@ -17,7 +17,7 @@ int main(void)
 		if (a % 2 == 0 && a <= 4000000)
 		{
 			total += a;
-		} else if (a < 4000000)
+		} else if (a > 4000000)
 		{
 			break;
 		}
