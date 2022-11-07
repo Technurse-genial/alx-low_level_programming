@@ -36,15 +36,15 @@ char **strtow(char *str)
 	int i, j, k, l, n = 0, qa = 0;
 	char **q;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
+	if (str == '\0' || *str == '\0')
+		return ('\0');
 	n = wrdcnt(str);
 	if (n == 1)
-		return (NULL);
+		return ('\0');
 	q = (char **)malloc(n * sizeof(char *));
-	if (q == NULL)
-	return (NULL);
-		q[n - 1] = NULL;
+	if (q == '\0')
+	return ('\0');
+		q[n - 1] = '\0';
 		i = 0;
 	while (str[i])
 	{
@@ -55,13 +55,13 @@ char **strtow(char *str)
 			j++;
 			q[qa] = (char *)malloc(j * sizeof(char));
 			j--;
-			if (q[qa] == NULL)
+			if (q[qa] == '\0')
 			{
 				for (k = 0; k < qa; k++)
 					free(q[k]);
 				free(q[n - 1]);
 					free(q);
-				return (NULL);
+				return ('\0');
 			}
 			for (l = 0; l < j; l++)
 				q[qa][l] = str[i + l];
